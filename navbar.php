@@ -45,7 +45,7 @@
 <!-- sidebar -->
     <div class="sidebar float-right ">
         <div class="list-group ">
-            <!-- <a href="#" class="list-group-item list-group-item-action  ">Home</a> -->
+            <a href="home.php" class="list-group-item list-group-item-action  ">Home</a>
             <a href="index.php" class="list-group-item list-group-item-action  ">Upload</a>
             <a href="show.php" class="list-group-item list-group-item-action  ">Edit</a>
             <a href="show.php" class="list-group-item list-group-item-action  ">Delete</a>
