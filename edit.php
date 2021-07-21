@@ -15,7 +15,7 @@
     }
 
     $data = $result->fetch_assoc();                        //fetching array with given url id which id is available in db
-    // print_r($data);                                                //from this array result taking values which is required 
+    // print_r($data);                                      //from this array result taking values which is required 
 
 ?>
 
@@ -58,10 +58,10 @@
                     </div> <!-- form-group  description// -->   
                     
                     
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="file">File input</label>
                         <input type="file" class="form-control-file" name="file" value="<?= $data['file'] ?>"   >
-                    </div><!-- form-group  file upload// -->
+                    </div>form-group  file upload -->
                     
                     
                     <div class="form-group">

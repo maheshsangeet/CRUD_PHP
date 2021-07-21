@@ -10,9 +10,9 @@
         if ($iquery) {
 
             ?>
-                <script>alert('deleted data');
+                <script>
+                        alert('deleted data');
                         location.replace("show.php");
-
                 </script>
             
             <?php

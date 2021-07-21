@@ -1,5 +1,4 @@
 <?php
-    include 'navbar.php';
     require_once('db.php');
 
     if(isset($_GET['id']) && isset($_POST['editForm'])) {
@@ -15,26 +14,24 @@
         if ($iquery) {
 
             ?>
-                <script>alert('modified data');
+                <script>
+                        alert('modified data');
                         location.replace("show.php");
-
                 </script>
-            
             <?php
         }
         else {
             ?>
-                <script>alert('something went wrong');</script>
+                <script>
+                        alert('something went wrong');
+                </script>
             <?php
             
         }
 
-
-        // echo 'from edit page';
     }
     else {
         echo 'invalid';
     }
-
 
 ?>

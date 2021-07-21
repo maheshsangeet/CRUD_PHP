@@ -1,0 +1,15 @@
+.sidebar{
+    text-align: center;
+    width:15%;
+    height:91vh;
+    background-color:#343A40;
+
+}
+.list-group-item {
+    background-color:#343A40;
+    color:white;
+
+}
+.list-group-item:hover {
+    color: black;
+}

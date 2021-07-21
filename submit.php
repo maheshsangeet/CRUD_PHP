@@ -1,6 +1,4 @@
 <?php
-
-include 'navbar.php';
 require_once('db.php');
 
     if (isset($_POST['submitForm'])){
@@ -14,12 +12,10 @@ require_once('db.php');
         if ($iquery) {
 
             ?>
-                <script>alert('added to db');
-                        location.replace("show.php");
-
+                <script>
+                        alert('added to db');
+                        location.replace("home.php");
                 </script>
-
-            
             <?php
         }
         else {
@@ -38,13 +34,6 @@ require_once('db.php');
 
 ?>
 
-<?php
-
-    $sql = "SELECT * FROM `files`";
-    $result = mysqli_query($con, $sql);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,13 +45,6 @@ require_once('db.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>CRUD</title>
-    <style>
-        .list-group-item {
-            background-color:#343A40;
-            color:white;
-
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -76,20 +58,23 @@ require_once('db.php');
                 </tr>
 
                 <?php
+                    $sql = "SELECT * FROM `files`";
+                    $result = mysqli_query($con, $sql);
                     $result_row = mysqli_num_rows($result);
 
-                    // if ($result_row > 0){
-                        // $row = mysqli_fetch_assoc($result);
 
-                    if($result->num_rows > 0){
-                        while ($row = $result->fetch_assoc()) {
+                    // if($result->num_rows > 0){
+                    //     while ($row = $result->fetch_assoc()) {
+                    if ($result_row > 0) {
+                        $row = mysqli_fetch_assoc($result);
+
+                        while ($row) {
                             echo "<tr>";
                             echo       "<td>" . $row['id']          .  "</td>";
                             echo       "<td>" . $row['title']       .  "</td>";
                             echo       "<td>" . $row['description'] .  "</td>";
                             echo       "<td>" . $row['file']        .  "</td>";             
                             echo "</tr>";
-                            
                         }
                     }
 

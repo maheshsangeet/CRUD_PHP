@@ -1,12 +1,3 @@
-<?php
-include 'navbar.php';
-require_once('db.php');
-
-    $sql = "SELECT * FROM `files`";
-    $result = mysqli_query($con, $sql);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +9,16 @@ require_once('db.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>CRUD</title>
-    <style>
-        .list-group-item {
-            background-color:#343A40;
-            color:white;
-
-        }
-    </style>
+    
 </head>
 <body>
+<?php   
+        include 'navbar.php';
+        require_once('db.php');
+        $sql = "SELECT * FROM `files`";
+        $result = mysqli_query($con, $sql);
+?>
+
     <div class="container">
         <table class="table mt-md-5" style="width:80%;">
             <thead class="thead-dark">

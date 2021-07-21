@@ -8,36 +8,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Document</title>
-    <style>
-        
-        .sidebar{
-            text-align: center;
-            width:15%;
-            height:91vh;
-            background-color:#343A40;
-
-        }
-        .list-group-item {
-            background-color:#343A40;
-            color:white;
-
-        }
-        .list-group-item:hover {
-            color: black;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
+    
 </head>
 <body>
-    
-
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            
             <h2 class="mx-auto text-white">CRUD operation</h2>
-            
         </div>
     </nav>
 <!-- navbar end -->
@@ -51,11 +30,7 @@
             <a href="show.php" class="list-group-item list-group-item-action  ">Delete</a>
         </div>
     </div>
-    
 <!-- sidebar end -->
-
-
-
 
 </body>
 </html>
