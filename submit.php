@@ -4,8 +4,9 @@ require_once('db.php');
     if (isset($_POST['submitForm'])){
         $title = $_POST['title'];
         $description = $_POST['description'];
+        $file = $_FILES['file']['name'];
 
-        $insertquery = "INSERT INTO `files` (`title`, `description`) VALUES('$title','$description') ";
+        $insertquery = "INSERT INTO `files` (`title`, `description`,`file`) VALUES('$title','$description','$file')";
         $iquery = mysqli_query($con, $insertquery);
 
 
@@ -29,6 +30,32 @@ require_once('db.php');
         ?>
             <script>alert('not submitted');</script>
         <?php  
+    }
+
+
+?>
+
+<?php
+    if(isset($_FILES['file'])) {
+        $file_name = $_FILES['file']['name'];
+        $file_size = $_FILES['file']['size'];
+        $file_tmp = $_FILES['file']['tmp_name'];
+        $file_type = $_FILES['file']['type'];
+
+        if(move_uploaded_file($file_tmp,"upload/" . $file_name)){
+            ?>
+            <script>alert('file uploaded');</script>
+            <?php 
+
+        }else {
+            ?>
+            <script>alert('file not uploaded');</script>
+            <?php 
+        }
+    }else {
+        ?>
+            <script>alert('error');</script>
+        <?php 
     }
 
 

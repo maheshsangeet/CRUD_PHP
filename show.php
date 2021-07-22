@@ -26,7 +26,8 @@
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
-                    <!-- <th scope="col">File</th> -->
+                    <th scope="col">File name</th>
+                    <th scope="col">Image</th>
                     <th scope="col">Actions</th>
 
                 </tr>
@@ -43,7 +44,12 @@
                             echo       "<td>" . $row['id']          .  "</td>";
                             echo       "<td>" . $row['title']       .  "</td>";
                             echo       "<td>" . $row['description'] .  "</td>";
-                            // echo       "<td>" . $row['file']        .  "</td>";
+                            echo       "<td>" . $row['file']        .  "</td>";
+                            ?> 
+                                <td> 
+                                    <img src="<?php echo "upload/" .$row['file']; ?>" width="80px" alt="image" >
+                                </td> 
+                            <?php
 
                             echo       "<td>";
                             echo            "<div class= 'btn-group'>";

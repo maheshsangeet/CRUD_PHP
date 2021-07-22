@@ -33,11 +33,11 @@
     <title>CRUD</title>
 </head>
 <body>
+<?php include('navbar.php') ?>
 
     
 <div class="container">
     <br>
-
         <div class="card bg-light " style="width:75%;">
             <article class="card-body mx-auto" style="max-width: 400px;">
 
@@ -53,15 +53,15 @@
 
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea class="form-control"  type="text" name="description" rows="3"  
-                            value="<?= $data['description'] ?>" ></textarea>
+                        <input class="form-control"  type="text" name="description" rows="3"  
+                            value="<?= $data['description'] ?>" ></input>
                     </div> <!-- form-group  description// -->   
                     
                     
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="file">File input</label>
                         <input type="file" class="form-control-file" name="file" value="<?= $data['file'] ?>"   >
-                    </div>form-group  file upload -->
+                    </div> <!-- form-group  file upload -->
                     
                     
                     <div class="form-group">

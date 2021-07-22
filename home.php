@@ -26,9 +26,8 @@
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
-                    <!-- <th scope="col">File</th> -->
-                    <!-- <th scope="col">Actions</th> -->
-
+                    <th scope="col">File name</th>
+                    <th scope="col">Image</th>
                 </tr>
 
                 <?php
@@ -39,29 +38,27 @@
 
                     if($result->num_rows > 0){
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo       "<td>" . $row['id']          .  "</td>";
-                            echo       "<td>" . $row['title']       .  "</td>";
-                            echo       "<td>" . $row['description'] .  "</td>";
-                            // echo       "<td>" . $row['file']        .  "</td>";
+                            // echo "<tr>";
+                            // echo       "<td>" . $row['id']          .  "</td>";
+                            // echo       "<td>" . $row['title']       .  "</td>";
+                            // echo       "<td>" . $row['description'] .  "</td>";
+                            // echo       "<td>" . $row['file']        .  "</td>";                              
+                            // echo "</tr>";
 
-                            // echo       "<td>";
-                            // echo            "<div class= 'btn-group'>";
-                            // echo                "<a type= 'button' class= 'btn btn-secondary' href='edit.php?id=" . $row['id'] ."' >Edit </a>";
-                            // echo                "<a type= 'button' class= 'btn btn-danger' href='delete.php?id=" . $row['id'] ."' >Delete </a>";
-
-                            // echo            "</div>";
-                            // echo       "</td>";
-
-                                        
-                            echo "</tr>";
+                            ?>
+                                <tr>
+                                    <td> <?php  echo $row['id']; ?></td>
+                                    <td> <?php  echo $row['title']; ?></td>
+                                    <td> <?php  echo $row['description']; ?></td>
+                                    <td> <?php  echo $row['file']; ?></td>
+                                    <td> <img src="<?php echo "upload/" .$row['file']; ?>" width="80px" alt="image"> </td>
+                                </tr>
+                            <?php
                             
                         }
                     }
 
                 ?>
-
-
             </thead> 
         </table>
     </div>

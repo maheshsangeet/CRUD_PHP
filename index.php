@@ -21,7 +21,7 @@
 
 
 
-                <form action="submit.php" method="POST" >
+                <form action="submit.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="title">Title</label>  
                         <input class="form-control" placeholder="" type="text" name="title" >
@@ -34,10 +34,10 @@
                     </div> <!-- form-group  description// -->   
                     
                     
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="file">File input</label>
                         <input type="file" class="form-control-file" name="file" >
-                    </div>form-group  file upload -->
+                    </div><!-- form-group  file upload -->
                     
                     
                     <div class="form-group">

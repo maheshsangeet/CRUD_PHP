@@ -7,8 +7,10 @@
         $id= $_GET['id'];            //from url
         $title = $_POST['title'];
         $description = $_POST['description'];
+        $file = $_FILES['file']['name'];
 
-        $sql = "UPDATE `files` SET `id`='$id',`title`='$title',`description`='$description'  WHERE id = $id ";
+
+        $sql = "UPDATE `files` SET `id`='$id',`title`='$title',`description`='$description', `file`='$file'   WHERE id = $id ";
         $iquery = mysqli_query($con, $sql);
 
         if ($iquery) {
